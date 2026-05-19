@@ -21,21 +21,30 @@ Static export is written to the `out/` directory.
 
 ## Deploy on Cloudflare Pages
 
-1. Push this repository to GitHub.
-2. In [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → **Create** → **Pages** → **Connect to Git**.
-3. Select this repository.
-4. Build settings:
+This project is a **static export** (`output: "export"` in `next.config.ts`). Do **not** use the full **Next.js** preset (OpenNext / `@opennextjs-cloudflare`) — that will fail.
+
+### Correct build settings (Dashboard)
+
+1. [Cloudflare Dashboard](https://dash.cloudflare.com/) → **Workers & Pages** → your project → **Settings** → **Build**
+2. Set:
 
 | Setting | Value |
 |--------|--------|
-| Framework preset | None (or Next.js Static) |
+| Framework preset | **Next.js (Static HTML Export)** or **None** |
 | Build command | `npm run build` |
 | Build output directory | `out` |
-| Node.js version | `20` (or `22`) |
+| Root directory | `/` (repo root) |
+| Node.js version | `20` |
 
-5. Deploy. Optional: add a custom domain (e.g. `peterdabrowski.dev`) under **Custom domains**.
+3. **Save** and trigger a new deployment (**Deployments** → **Retry deployment**).
 
-No environment variables are required for the static build.
+### If you see `opennextjs-cloudflare build` failed
+
+Cloudflare is using the wrong framework preset (**Next.js** with Workers, not static export). Change the preset to **Next.js (Static HTML Export)** or **None** with `npm run build` and output `out`, then redeploy.
+
+The repo includes `wrangler.jsonc` with `pages_build_output_dir: "./out"` so Wrangler/Pages knows the static output folder.
+
+No environment variables are required.
 
 ## Project structure
 
