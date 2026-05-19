@@ -27,9 +27,13 @@ export function Projects() {
 
       <div className="flex flex-col gap-gutter">
         {PROJECTS.map((project) => (
-          <article
+          <a
             key={project.title}
-            className="card-bg group flex cursor-pointer flex-col transition-colors duration-300"
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${project.title}`}
+            className="card-bg group flex flex-col no-underline transition-colors duration-300"
           >
             <div className="relative aspect-video w-full overflow-hidden bg-surface-container-high">
               <Image
@@ -67,7 +71,7 @@ export function Projects() {
                 ))}
               </div>
             </div>
-          </article>
+          </a>
         ))}
       </div>
     </section>
