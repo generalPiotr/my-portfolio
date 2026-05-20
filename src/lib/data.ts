@@ -61,8 +61,11 @@ export const PROJECTS = [
 ] as const;
 
 export const FOOTER_LINKS = [
-  { href: "#", label: "GitHub", icon: "github" },
-  { href: "#", label: "LinkedIn", icon: "linkedin" },
-  { href: "#", label: "X", icon: "x" },
-  { href: "#", label: "Email", icon: "email" },
+  { href: "https://github.com/generalPiotr", label: "GitHub", icon: "github" },
+  {
+    href: "https://www.linkedin.com/in/piotr-dabrowski-wroclaw/",
+    label: "LinkedIn",
+    icon: "linkedin",
+  },
+  { href: "mailto:piotrdabrowski.dev@gmail.com", label: "Email", icon: "email" },
 ] as const;

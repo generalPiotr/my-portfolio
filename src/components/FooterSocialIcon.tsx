@@ -1,14 +1,13 @@
 import type { IconType } from "react-icons";
 import { FaLinkedin } from "react-icons/fa6";
 import { HiOutlineEnvelope } from "react-icons/hi2";
-import { SiGithub, SiX } from "react-icons/si";
+import { SiGithub } from "react-icons/si";
 
-export type FooterSocialId = "github" | "linkedin" | "x" | "email";
+export type FooterSocialId = "github" | "linkedin" | "email";
 
 const FOOTER_SOCIAL_ICONS: Record<FooterSocialId, IconType> = {
   github: SiGithub,
   linkedin: FaLinkedin,
-  x: SiX,
   email: HiOutlineEnvelope,
 };
 
