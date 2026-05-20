@@ -12,18 +12,6 @@ export function Projects() {
         <h2 className="text-headline-lg-mobile font-semibold md:text-headline-lg">
           Selected Works
         </h2>
-        <a
-          href="#"
-          className="flex items-center gap-2 font-mono text-label-sm text-primary-fixed-dim transition-colors hover:text-primary"
-        >
-          View All Projects
-          <span
-            className="material-symbols-outlined"
-            style={{ fontSize: 16 }}
-          >
-            arrow_forward
-          </span>
-        </a>
       </div>
 
       <div className="flex flex-col gap-gutter">
