@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TechIcon } from "@/components/TechIcon";
 import { PROJECTS } from "@/lib/data";
 
 export function Projects() {
@@ -64,8 +65,9 @@ export function Projects() {
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="chip-bg rounded-full px-3 py-1 font-mono text-xs text-label-sm"
+                    className="chip-bg inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 font-mono text-xs text-label-sm"
                   >
+                    <TechIcon tag={tag} />
                     {tag}
                   </span>
                 ))}
