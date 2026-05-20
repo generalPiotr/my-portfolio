@@ -5,6 +5,7 @@ import { NAV_LINKS } from "@/lib/data";
 
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const resumeHref = "/peter-dabrowski-cv-2026.pdf";
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-outline-variant/60 bg-background/75 backdrop-blur-md">
@@ -28,12 +29,14 @@ export function Nav() {
           ))}
         </div>
 
-        <button
-          type="button"
+        <a
+          href={resumeHref}
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden rounded bg-primary-fixed-dim px-6 py-3 font-mono text-label-sm text-black transition-colors duration-200 hover:bg-primary md:block"
         >
           Resume
-        </button>
+        </a>
 
         <button
           type="button"
@@ -61,12 +64,15 @@ export function Nav() {
                 {link.label}
               </a>
             ))}
-            <button
-              type="button"
+            <a
+              href={resumeHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 w-fit rounded bg-primary-fixed-dim px-6 py-3 font-mono text-label-sm text-black"
+              onClick={() => setMenuOpen(false)}
             >
               Resume
-            </button>
+            </a>
           </div>
         </div>
       )}
