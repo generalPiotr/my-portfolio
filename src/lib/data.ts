@@ -36,7 +36,7 @@ export const PROJECTS = [
     image: "/projects/et-roofing.png",
     alt: "E.T Roofing website homepage with hero section and quote request form.",
     imageFit: "contain",
-    href: "https://github.com/generalPiotr/roofers-website",
+    href: "https://roofers-website-2137.vercel.app/",
   },
   {
     title: "Teddy Cherry Club website",
