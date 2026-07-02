@@ -58,6 +58,16 @@ export const PROJECTS = [
     imageFit: "contain",
     href: "https://github.com/generalPiotr/GymAI",
   },
+  {
+    title: "Bloom Agency",
+    description:
+      "A sleek, conversion-focused website created for a marketing agency. A high-performance combination of React and Tailwind CSS, powered by the lightning-fast Vite build tool. The project stands out with its elegant dark theme, striking purple accents, and a strong emphasis on clearly presenting specialized services and impressive growth metrics.",
+    tags: ["Vite", "React", "JavaScript", "HTML", "CSS"],
+    image: "/projects/bloom-agency.png",
+    alt: "Bloom Agency marketing website homepage with dark theme and purple accents.",
+    imageFit: "contain",
+    href: "https://bloomagency.pl/",
+  },
 ] as const;
 
 export const FOOTER_LINKS = [

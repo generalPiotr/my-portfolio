@@ -6,6 +6,8 @@ import {
   SiJavascript,
   SiOllama,
   SiPhp,
+  SiReact,
+  SiVite,
   SiWordpress,
 } from "react-icons/si";
 import { TbBrandReactNative } from "react-icons/tb";
@@ -25,6 +27,8 @@ const TECH_BY_TAG: Record<string, TechConfig> = {
   PHP: { Icon: SiPhp, color: "#777BB4" },
   WordPress: { Icon: SiWordpress, color: "#21759B" },
   Astro: { Icon: SiAstro, color: "#FF5D01" },
+  Vite: { Icon: SiVite, color: "#646CFF" },
+  React: { Icon: SiReact, color: "#61DAFB" },
   "React Native": { Icon: TbBrandReactNative, color: "#61DAFB" },
   Ollama: { Icon: SiOllama, color: "#FFFFFF" },
 };
